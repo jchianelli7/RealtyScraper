@@ -3,12 +3,15 @@ var vo = require('vo');
 var Nightmare = require('nightmare');
 const ObjectsToCsv = require('objects-to-csv');
 
-vo(run)(function(err, result) {                                                                                                                                                                            
+var zip = process.argv[2]
+zip == undefined ? zip = 53217 : zip = zip;
+
+vo(run)(zip, function(err, result) {                                                                                                                                                                            
 	if (err) throw err;                                                                                                                                                                                    
 });                                                                                                                                                                                                        
 
 
-function* run() {   
+function* run(zip) {   
 	var nightmare = Nightmare(),
 		MAX_PAGE = 10,                                                                                                                                                                                     
 		currentPage = 0,
@@ -16,7 +19,7 @@ function* run() {
 		houses = [];
 
 	yield nightmare
-		.goto('https://www.realtor.com/realestateandhomes-search/53217')
+		.goto('https://www.realtor.com/realestateandhomes-search/'+zip)
 		.wait('body')
     
 	nextExists = yield nightmare.visible('.next');   
