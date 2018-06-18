@@ -33,6 +33,9 @@ node realty.js
 which by default selects the zipcode "53217" (Milwaukee, WI) or
 ```
 node realty.js (5 Digit zipcode)
+E.g.    node realty.js 90210
+        node realty.js 60007
+        node realty.js 10001
 ```
 to collect real estate data for other zip codes
 
