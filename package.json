@@ -1,0 +1,20 @@
+{
+  "name": "RealtyScraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "realty.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^2.0.2",
+    "jquery": "^3.3.1",
+    "nightmare": "^2.10.0",
+    "objects-to-csv": "^1.0.1",
+    "regression": "^2.0.1",
+    "vo": "^4.0.2"
+  }
+}
